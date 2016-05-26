@@ -58,6 +58,13 @@ void draw_string(const char* text, glm::vec2 const& pos, glm::vec3 const& color,
     glutBitmapString(font, reinterpret_cast<const unsigned char*>(text));
 }
 
-void draw_rectangle(glm::vec2 const& up_left, float width, float height) {
-    
+void draw_rectangle(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color) {
+    glColor3f(color.r, color.g, color.b);
+    glBegin(GL_POLYGON);
+        glVertex2f(up_left.x, up_left.y);
+        glVertex2f(up_left.x + width, up_left.y);
+        glVertex2f(up_left.x + width, up_left.y + height);
+        glVertex2f(up_left.x, up_left.y + height);
+    glEnd();
+    glFinish();
 }

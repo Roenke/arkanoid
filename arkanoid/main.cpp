@@ -33,6 +33,7 @@ void fps_counter() {
 
 void display() {
 	fps_counter();
+    draw_rectangle({10, 20}, 10, 10, {1, 1, 1});
 }
 
 int main(int argc, char* argv[]) {

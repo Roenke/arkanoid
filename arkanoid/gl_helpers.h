@@ -8,4 +8,4 @@ struct gl_config {
 
 void init_gl(int argc, char* argv[], gl_config const& config);
 void draw_string(const char* text, glm::vec2 const& pos, glm::vec3 const& color, void* font);
-void background_fill(glm::vec3 const& color);
+void draw_rectangle(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color);
