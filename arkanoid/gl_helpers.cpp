@@ -2,6 +2,10 @@
 #include <gl/freeglut.h>
 #include <iostream>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+static const int CIRCLE_PARTS = 50;
 static size_t SCREEN_WIDTH = 800;
 static size_t SCREEN_HEIGHT = 600;
 
@@ -65,6 +69,16 @@ void draw_rectangle(glm::vec2 const& up_left, float width, float height, glm::ve
         glVertex2f(up_left.x + width, up_left.y);
         glVertex2f(up_left.x + width, up_left.y + height);
         glVertex2f(up_left.x, up_left.y + height);
+    glEnd();
+    glFinish();
+}
+
+void draw_circle(glm::vec2 const& center, float r, glm::vec3 const& color) {
+    float phi = 2 * M_PI / CIRCLE_PARTS;
+    glColor3f(color.r, color.g, color.b);
+    glBegin(GL_POLYGON);
+        for (int i = 0; i < CIRCLE_PARTS; i++)
+            glVertex2f(center.x + r * cos(i * phi), center.y + r * sin(i * phi));
     glEnd();
     glFinish();
 }
