@@ -1,8 +1,9 @@
 #include "gl_helpers.h"
 #include <gl/freeglut.h>
+#include <iostream>
 
-static const size_t SCREEN_WIDTH = 800;
-static const size_t SCREEN_HEIGHT = 600;
+static size_t SCREEN_WIDTH = 800;
+static size_t SCREEN_HEIGHT = 600;
 
 static void (*display_callback_internal)();
 
@@ -16,15 +17,26 @@ static void display_callback() {
     glutSwapBuffers();
 }
 
-static void ignore_resize(int, int) {
-    glutReshapeWindow(SCREEN_WIDTH, SCREEN_HEIGHT);
+static void reshape_callback(GLint width, GLint height) {
+	SCREEN_WIDTH = width;
+	SCREEN_HEIGHT = height;
+	glViewport(0, 0, width, height);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrtho(0, width, height, 0, 0, 1.0);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+}
+
+static void mouse_callback(GLint mouse_button, GLint current_state, GLint x, GLint y) {
+	std::cout << "Mouse click: " << mouse_button << ", x = " << x << " , y = " << y << std::endl;
 }
 
 void init_gl(int argc, char* argv[], gl_config const& config) {
     glutInit(&argc, argv);
     glutInitWindowSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     glutInitWindowPosition(500, 200);
-    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutCreateWindow("arkanoid");
     glClearColor(0.0, 0.0, 0.0, 0.0);
 
@@ -34,18 +46,18 @@ void init_gl(int argc, char* argv[], gl_config const& config) {
     display_callback_internal = config.display;
     glutDisplayFunc(display_callback);
     glutIdleFunc(idle_callback);
-    glutReshapeFunc(ignore_resize);
+    glutReshapeFunc(reshape_callback);
+	glutMouseFunc(mouse_callback);
 
     glutMainLoop();
 }
 
-void draw_string(const char * text) {
-    glColor3f(1., 1., 0.);
-    glRasterPos2f(-1, 0.93);
-    glutBitmapString(GLUT_BITMAP_HELVETICA_18, reinterpret_cast<const unsigned char*>(text));
+void draw_string(const char* text, glm::vec2 const& pos, glm::vec3 const& color, void* font) {
+    glColor3f(color.r, color.g, color.b);
+    glRasterPos2i(pos.x, pos.y);
+    glutBitmapString(font, reinterpret_cast<const unsigned char*>(text));
 }
 
-void background_fill(glm::vec3 const& color) {
-    glColor3f(color.r, color.g, color.b);
-    glRectf(-1, -1, 1, 1);
+void draw_rectangle(glm::vec2 const& up_left, float width, float height) {
+    
 }

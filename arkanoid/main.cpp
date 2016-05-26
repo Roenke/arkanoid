@@ -21,25 +21,24 @@ void fps_counter() {
     static size_t frames;
     static size_t fps = 0;
     ++frames;
-    draw_string(std::to_string(fps).c_str());
+    draw_string(std::to_string(fps).c_str(), { 5, 20 }, { 1., 1., 0. }, GLUT_BITMAP_HELVETICA_18);
     auto now = std::chrono::high_resolution_clock::now();
     auto diff = now - start_time;
     if (now - start_time >= std::chrono::milliseconds(50)) {
-        fps = frames / (std::chrono::duration_cast<std::chrono::milliseconds>(diff).count() / 1000.);
+        fps = static_cast<size_t>(frames / (std::chrono::duration_cast<std::chrono::milliseconds>(diff).count() / 1000.));
         frames = 0;
         start_time = now;
     }
 }
 
 void display() {
-    background_fill({0., 0., 0.});
-    fps_counter();
+	fps_counter();
 }
 
 int main(int argc, char* argv[]) {
     gl_config config{ on_key_down_callback, on_key_up_callback, display };
 
-    game_ptr = new game;
+    game_ptr = new game{};
 
     init_gl(argc, argv, config);
 

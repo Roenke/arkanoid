@@ -6,7 +6,7 @@
 
 class game : public drawable {
 public:
-    game() = default;
+    game();
     ~game() override;
     void render() override;
 

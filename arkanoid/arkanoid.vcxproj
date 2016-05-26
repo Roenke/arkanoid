@@ -146,15 +146,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ball.cpp" />
+    <ClCompile Include="block.cpp" />
+    <ClCompile Include="bonus.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="game_field.cpp" />
     <ClCompile Include="gl_helpers.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="rocket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ball.h" />
+    <ClInclude Include="block.h" />
+    <ClInclude Include="bonus.h" />
+    <ClInclude Include="drawable.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="game_field.h" />
     <ClInclude Include="gl_helpers.h" />
+    <ClInclude Include="rocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
