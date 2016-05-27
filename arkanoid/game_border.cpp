@@ -1,11 +1,8 @@
 ﻿#include "game_border.h"
 #include "gl_helpers.h"
-game_border::game_border(GLint width, GLint height)
-    : width_(width)
-    , height_(height) {}
-
+#include "config.h"
 game_border::~game_border() {}
 
 void game_border::render() {
-    draw_frame({ 1, 1 }, width_, height_, { 1, 0, 1 });
+    draw_frame({ 1, 1 }, DEFAULT_GAME_WIDTH, DEFAULT_GAME_HEIGHT, { 1, 0, 1 });
 }

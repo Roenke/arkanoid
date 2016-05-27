@@ -6,7 +6,7 @@
 
 class game_field : public drawable {
 public:
-    game_field(GLint width, GLint height);
+    game_field();
     void render() override;
     ~game_field() override;
 

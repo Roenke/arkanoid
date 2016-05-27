@@ -2,16 +2,16 @@
 #include <glm/glm.hpp>
 #include <gl/freeglut.h>
 #include "drawable.h"
-
+#include "config.h"
 class rocket : public drawable {
 public:
-    rocket(const glm::vec2& pos, GLint size, GLint height)
-        : pos_(pos),
-          size_(size),
-          height_(height) 
+    rocket(GLint field_width, GLint field_height)
+        : pos_({ START_ROCKET_H_OFFSET, field_height - ROCKET_BOTTOM_OFSET })
+        , size_(START_ROCKET_SIZE)
+        , height_(START_ROCKET_HEIGHT)
     {}
 
-
+    void process(float elapsed_time);
     ~rocket() override;
     void render() override;
 private:
