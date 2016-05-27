@@ -56,7 +56,7 @@ void display() {
 int main(int argc, char* argv[]) {
     gl_config config{ on_key_down_callback, on_key_up_callback, display, reshape_callback, screen_width, screen_height };
 
-    game_ptr = new game{ screen_width, screen_height };
+    game_ptr = new game{ GAME_FIELD_WIDTH, GAME_FIELD_HEIGHT };
 
     init_gl(argc, argv, config);
 

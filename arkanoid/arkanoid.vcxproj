@@ -153,6 +153,7 @@
     <ClCompile Include="game_border.cpp" />
     <ClCompile Include="game_field.cpp" />
     <ClCompile Include="gl_helpers.cpp" />
+    <ClCompile Include="legend.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rocket.cpp" />
   </ItemGroup>
@@ -163,11 +164,13 @@
     <ClInclude Include="ball.h" />
     <ClInclude Include="block.h" />
     <ClInclude Include="bonus.h" />
+    <ClInclude Include="config.h" />
     <ClInclude Include="drawable.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="game_border.h" />
     <ClInclude Include="game_field.h" />
     <ClInclude Include="gl_helpers.h" />
+    <ClInclude Include="legend.h" />
     <ClInclude Include="rocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

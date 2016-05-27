@@ -1,7 +1,7 @@
 ﻿#include "game_border.h"
 #include "gl_helpers.h"
 game_border::game_border(GLint width, GLint height)
-    : width_(width - 300)
+    : width_(width)
     , height_(height) {}
 
 game_border::~game_border() {}
