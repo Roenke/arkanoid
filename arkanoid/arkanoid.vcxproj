@@ -150,6 +150,7 @@
     <ClCompile Include="block.cpp" />
     <ClCompile Include="bonus.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="game_border.cpp" />
     <ClCompile Include="game_field.cpp" />
     <ClCompile Include="gl_helpers.cpp" />
     <ClCompile Include="main.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="bonus.h" />
     <ClInclude Include="drawable.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="game_border.h" />
     <ClInclude Include="game_field.h" />
     <ClInclude Include="gl_helpers.h" />
     <ClInclude Include="rocket.h" />

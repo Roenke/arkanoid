@@ -42,6 +42,9 @@
     <ClCompile Include="game_field.cpp">
       <Filter>Заголовочные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="game_border.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="bonus.h">
       <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="game_border.h">
+      <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
