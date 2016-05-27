@@ -10,6 +10,9 @@ public:
     block(glm::vec2 const pos, GLint width, GLint height);
 
     bool collide(ball& b, float ellapsed_time) const;
+
+    glm::vec2 get_pos() const;
+
     ~block() override;
     void render() override;
 private:

@@ -78,3 +78,14 @@ void draw_circle(glm::vec2 const& center, float r, glm::vec3 const& color) {
     glEnd();
     glFinish();
 }
+
+void draw_diamond(glm::vec2 const& center, float width, float height, glm::vec3 const& color) {
+    glColor3f(color.r, color.g, color.b);
+    glBegin(GL_POLYGON);
+        glVertex2f(center.x + width / 2, center.y);
+        glVertex2f(center.x, center.y + height / 2);
+        glVertex2f(center.x - width / 2, center.y);
+        glVertex2f(center.x, center.y - height / 2);
+    glEnd();
+    glFinish();
+}

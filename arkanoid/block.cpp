@@ -45,6 +45,10 @@ bool block::collide(ball& b, float ellapsed_time) const {
     return false;
 }
 
+glm::vec2 block::get_pos() const {
+    return pos_ + glm::vec2{width_ / 2, height_ / 2};
+}
+
 block::~block() {}
 
 void block::render() {

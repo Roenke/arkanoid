@@ -1,5 +1,7 @@
 ﻿#include "game_field.h"
 #include "config.h"
+#include "extend_bonus.h"
+
 game_field::game_field() {
     glm::vec2 pos = { BLOCK_H_OFFSET, BLOCK_V_OFFSET };
 
@@ -18,6 +20,10 @@ void game_field::render() {
     for(auto& b : blocks_) {
         b.render();
     }
+
+    for(auto bonus : bonuses_) {
+        bonus->render();
+    }
 }
 
 game_field::~game_field() {}
@@ -26,10 +32,17 @@ void game_field::collide(ball& b, float ellapsed_time) {
     auto it = blocks_.begin();
     while(it != blocks_.end()) {
         if (it->collide(b, ellapsed_time)) {
+            bonuses_.push_back(new extend_bonus{ it->get_pos() });
             it = blocks_.erase(it);
             break;
         }
 
         ++it;
+    }
+}
+
+void game_field::process(float ellapsed_time) {
+    for(auto bonus : bonuses_) {
+        bonus->process(ellapsed_time);
     }
 }

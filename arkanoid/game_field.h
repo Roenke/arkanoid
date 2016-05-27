@@ -10,8 +10,9 @@ public:
     void render() override;
     ~game_field() override;
     void collide(ball& b, float ellapsed_time);
+    void process(float ellapsed_time);
 
 private:
     std::list<block> blocks_;
-    //std::list<bonus> bonuses_;
+    std::list<bonus*> bonuses_;
 };

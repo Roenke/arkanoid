@@ -54,6 +54,12 @@
     <ClCompile Include="geom_helpers.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="squeeze_bonus.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="extend_bonus.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -94,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="rocket.h">
       <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="squeeze_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="extend_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -16,3 +16,4 @@ void draw_string(const char* text, glm::vec2 const& pos, glm::vec3 const& color,
 void draw_rectangle(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color);
 void draw_frame(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color);
 void draw_circle(glm::vec2 const& center, float r, glm::vec3 const& color);
+void draw_diamond(glm::vec2 const& center, float width, float height, glm::vec3 const& color);

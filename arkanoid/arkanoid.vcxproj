@@ -149,6 +149,7 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="block.cpp" />
     <ClCompile Include="bonus.cpp" />
+    <ClCompile Include="extend_bonus.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_border.cpp" />
     <ClCompile Include="game_field.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="legend.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rocket.cpp" />
+    <ClCompile Include="squeeze_bonus.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -167,6 +169,7 @@
     <ClInclude Include="bonus.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="drawable.h" />
+    <ClInclude Include="extend_bonus.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="game_border.h" />
     <ClInclude Include="game_field.h" />
@@ -174,6 +177,7 @@
     <ClInclude Include="gl_helpers.h" />
     <ClInclude Include="legend.h" />
     <ClInclude Include="rocket.h" />
+    <ClInclude Include="squeeze_bonus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
