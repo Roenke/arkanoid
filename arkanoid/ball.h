@@ -8,6 +8,17 @@ public:
     explicit ball(glm::vec2 const& pos);
 
     void render() override;
+    void reverse();
+    void inverse_vertical();
+    void inverse_horizontal();
+
+    void negate_vertical();
+    void negate_horizontal();
+    void positive_vertical();
+    void positive_horizontal();
+
+    glm::vec2 get_new_pos(float elapsed_time) const;
+    GLint get_radius() const;
 
     ~ball() override;
     void process(float elapsed_time);

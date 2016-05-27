@@ -1,6 +1,5 @@
 #pragma once
 #include <gl/freeglut.h>
-#include <chrono>
 #include "drawable.h"
 #include "rocket.h"
 #include "game_field.h"

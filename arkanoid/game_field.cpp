@@ -21,3 +21,15 @@ void game_field::render() {
 }
 
 game_field::~game_field() {}
+
+void game_field::collide(ball& b, float ellapsed_time) {
+    auto it = blocks_.begin();
+    while(it != blocks_.end()) {
+        if (it->collide(b, ellapsed_time)) {
+            it = blocks_.erase(it);
+            break;
+        }
+
+        ++it;
+    }
+}

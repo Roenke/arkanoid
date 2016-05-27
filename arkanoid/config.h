@@ -19,5 +19,5 @@
 
 #define BALL_RADIUS             10
 #define BALL_COLOR              { 0.3, 0.7, 0.4 }
-#define START_BALL_SPEED        80
+#define START_BALL_SPEED        400
 #define START_BALL_DIRECTION    { -1., -1. }

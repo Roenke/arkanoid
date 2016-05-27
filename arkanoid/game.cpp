@@ -20,5 +20,7 @@ void game::render() {
 
 void game::process(float elapsed_time) {
     player_.process(elapsed_time);
+    player_.collide(ball_, elapsed_time);
+    field_.collide(ball_, elapsed_time);
     ball_.process(elapsed_time);
 }

@@ -9,6 +9,7 @@ public:
     game_field();
     void render() override;
     ~game_field() override;
+    void collide(ball& b, float ellapsed_time);
 
 private:
     std::list<block> blocks_;
