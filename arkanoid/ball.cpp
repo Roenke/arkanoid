@@ -1,6 +1,8 @@
 ﻿#include "ball.h"
 #include "gl_helpers.h"
 #include "config.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 ball::ball(glm::vec2 const& pos)
     : pos_(pos)
@@ -41,6 +43,19 @@ void ball::positive_vertical() {
 
 void ball::positive_horizontal() {
     direction_.x = fabs(direction_.x);
+}
+
+void ball::rotate_direction(float phi) {
+    auto x = direction_.x;
+    auto y = direction_.y;
+
+    direction_.x = x * cos(phi) - y * sin(phi);
+    direction_.y = x * sin(phi) + y * cos(phi);
+    // disallow rotate more then 30 degrees
+    if(fabs(direction_.y) < 0.5) {
+        direction_.x = x;
+        direction_.y = y;
+    }
 }
 
 glm::vec2 ball::get_new_pos(float elapsed_time) const {

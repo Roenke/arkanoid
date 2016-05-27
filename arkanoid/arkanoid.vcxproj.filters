@@ -16,6 +16,9 @@
     <Filter Include="Заголовочные файлы\bonus">
       <UniqueIdentifier>{cea74037-be01-424f-8370-692b607f44d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\objects">
+      <UniqueIdentifier>{3af49eef-4a1b-416f-8c5c-a48fcf8a9cc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,41 +59,41 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="gl_helpers.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="drawable.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="rocket.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="ball.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="block.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="game_field.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="bonus.h">
       <Filter>Заголовочные файлы\bonus</Filter>
-    </ClInclude>
-    <ClInclude Include="game_border.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="legend.h">
-      <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="config.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="geom_helpers.h">
       <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ball.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="block.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game_border.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="drawable.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game_field.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="legend.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="rocket.h">
+      <Filter>Заголовочные файлы\objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

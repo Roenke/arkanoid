@@ -16,6 +16,7 @@ public:
     void negate_horizontal();
     void positive_vertical();
     void positive_horizontal();
+    void rotate_direction(float phi);
 
     glm::vec2 get_new_pos(float elapsed_time) const;
     GLint get_radius() const;

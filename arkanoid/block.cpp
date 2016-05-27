@@ -4,10 +4,11 @@
 block::block(glm::vec2 const pos, GLint width, GLint height)
     : pos_(pos)
     , width_(width)
-    , height_(height) {
+    , height_(height)
+    , live_points_(0) {
 }
 
-bool block::collide(ball& b, float ellapsed_time) {
+bool block::collide(ball& b, float ellapsed_time) const {
     auto ball_pos = b.get_new_pos(ellapsed_time);
     auto r = b.get_radius();
 

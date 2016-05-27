@@ -9,7 +9,7 @@ class block : public drawable {
 public:
     block(glm::vec2 const pos, GLint width, GLint height);
 
-    bool collide(ball& b, float ellapsed_time);
+    bool collide(ball& b, float ellapsed_time) const;
     ~block() override;
     void render() override;
 private:

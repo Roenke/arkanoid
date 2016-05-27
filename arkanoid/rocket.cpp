@@ -1,17 +1,24 @@
-﻿#include <algorithm>
+﻿#define _USE_MATH_DEFINES
+#include <algorithm>
+#include <math.h>
 #include "rocket.h"
 #include "gl_helpers.h"
 #include "ball.h"
 #include "geom_helpers.h"
+
 extern bool right_key_pressed;
 extern bool left_key_pressed;
 
 void rocket::collide(ball& b, float elapsed_time) const {
     auto r = b.get_radius();
     auto pos = b.get_new_pos(elapsed_time);
-    auto dist = distance_to_segment(pos, { pos_,{ pos_.x + size_, pos_.y } });
+    auto nearest = get_nearest_point(pos, { pos_,{ pos_.x + size_, pos_.y } });
+    auto dist = distance_to_point(pos, nearest);
     if (dist < r) {
         b.inverse_vertical();
+        auto offset = nearest.x - (pos_.x + size_ / 2);
+        auto phi = M_PI_4 * (offset / (size_ / 2)) / 2;
+        b.rotate_direction(phi);
     }
 }
 
