@@ -3,6 +3,7 @@
 #include "config.h"
 
 void unstick_bonus::visit(rocket& player) {
+    player.is_sticky_ = false;
     player.with_ball_ = false;
 }
 

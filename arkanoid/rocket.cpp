@@ -24,6 +24,10 @@ void rocket::collide_with_ball(float elapsed_time) {
         float offset = nearest.x - (pos_.x + size_ / 2);
         float phi = static_cast<float>(M_PI_4) * (offset / (size_ / 2)) / 2;
         ball_.rotate_direction(phi);
+        if(is_sticky_) {
+            with_ball_ = true;
+            ball_.set_position({ pos.x, pos_.y - r });
+        }
     }
 }
 
@@ -38,6 +42,7 @@ bool rocket::collide(bonus* bonus, float elapsed_time) const {
 }
 
 void rocket::process(float elapsed_time) {
+    auto old = pos_.x;
     if(!left_key_pressed && right_key_pressed) {
         auto new_pos = static_cast<GLint>(pos_.x + elapsed_time * ROCKET_SPEED);
         pos_.x = static_cast<float>(std::min(DEFAULT_GAME_WIDTH - size_, new_pos));
@@ -51,7 +56,7 @@ void rocket::process(float elapsed_time) {
         ball_.process(elapsed_time);
     }
     else {
-        center_ball();
+        ball_.move_x(pos_.x - old);
     }
 }
 

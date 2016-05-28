@@ -99,3 +99,7 @@ void ball::process(float elapsed_time) {
         pos_.y = new_y;
     }
 }
+
+void ball::move_x(float distance) {
+    pos_.x += distance;
+}

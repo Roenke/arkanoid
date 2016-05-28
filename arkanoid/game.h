@@ -10,13 +10,15 @@ class safe_line_bonus;
 
 class game : public drawable {
 public:
-    game(GLint width, GLint height);
+    game();
     ~game() override;
     void render() override;
     void process(float elapsed_time);
     void apply_bonus(bonus* bonus);
     rocket& get_rocket();
     void release_ball();
+
+    void change_score(int delta);
 
     friend safe_line_bonus;
 private:
@@ -30,7 +32,7 @@ private:
     legend legend_;
 
     int score_;
-    int lives_;
+    int lifes_;
 
     int save_line_count;
 };

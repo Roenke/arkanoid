@@ -22,12 +22,18 @@
 #define BLOCK_H_OFFSET   90
 #define BETWEEN_BLOCKS_H_OFFSET 5
 #define BETWEEN_BLOCKS_V_OFFSET 5
+#define MAX_BLOCK_LIVE          5
+#define BLOCK_1_COLOR           {1, 0, 0}
+#define BLOCK_2_COLOR           {1, 1, 0}
+#define BLOCK_3_COLOR           {1, 0.6, 0}
+#define BLOCK_4_COLOR           {0, 1, 1}
+#define BLOCK_5_COLOR           {1, 1, 1}
 
 #define START_ROCKET_SIZE     200
 #define ROCKET_BOTTOM_OFSET   40
 #define START_ROCKET_H_OFFSET 200
 #define START_ROCKET_HEIGHT   12
-#define ROCKET_SPEED          500
+#define ROCKET_SPEED          800
 #define MAX_ROCKET_SIZE       500
 #define MIN_ROCKET_SIZE       50
 
@@ -51,7 +57,7 @@
 #define BONUS_FALL_SPEED    80
 
 #define BONUSES_COUNT       7
-#define BONUS_PROPABILITY   1.
+#define BONUS_PROPABILITY   0.30
 
 #define EXTEND_BONUS_COLOR                  {0, 1, 0}
 #define EXTEND_BONUS_DESCRIPTION            "Extend rocket"

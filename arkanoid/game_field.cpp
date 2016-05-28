@@ -1,13 +1,13 @@
 ﻿#include "game_field.h"
 #include "config.h"
 #include "game.h"
-#include <random>
+
 game_field::game_field() {
     glm::vec2 pos = { BLOCK_H_OFFSET, BLOCK_V_OFFSET };
 
     for(int i = 0; i < BLOCK_ROWS_COUNT; ++i) {
         while(pos.x + BLOCK_WIDTH < DEFAULT_GAME_WIDTH - BLOCK_H_OFFSET) {
-            blocks_.push_back(block(pos, BLOCK_WIDTH, BLOCK_HEIGHT));
+            blocks_.push_back(block(pos, rand() % MAX_BLOCK_LIVE + 1));
             pos.x += BLOCK_WIDTH + BETWEEN_BLOCKS_H_OFFSET;
         }
 
@@ -32,11 +32,16 @@ void game_field::collide(ball& b, float elapsed_time, game* game_ptr) {
     auto it = blocks_.begin();
     while(it != blocks_.end()) {
         if (it->collide(b, elapsed_time)) {
+            game_ptr->change_score(1);
             bonus* bonus = bonus_factory_.get_random_bonus(it->get_pos());
             if(bonus) {
                 bonuses_.push_back(bonus);
             }
-            it = blocks_.erase(it);
+
+            if(it->is_dead()) {
+                it = blocks_.erase(it);
+            }
+
             break;
         }
 

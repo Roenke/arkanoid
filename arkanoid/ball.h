@@ -33,7 +33,7 @@ public:
 
     ~ball() override;
     void process(float elapsed_time);
-
+    void move_x(float distance);
     friend speed_down_bonus;
     friend speed_up_bonus;
     friend crazy_ball_bonus;

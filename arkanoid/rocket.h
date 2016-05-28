@@ -46,5 +46,6 @@ private:
 
     ball ball_;
 
+    bool is_sticky_;
     bool with_ball_;
 };

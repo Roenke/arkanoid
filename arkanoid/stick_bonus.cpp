@@ -1,7 +1,7 @@
 ﻿#include "stick_bonus.h"
 #include "rocket.h"
 void stick_bonus::visit(rocket& player) {
-    player.with_ball_ = true;
+    player.is_sticky_ = true;
 }
 
 glm::vec3 stick_bonus::get_color() {
