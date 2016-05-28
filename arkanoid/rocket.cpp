@@ -5,7 +5,7 @@
 #include "gl_helpers.h"
 #include "ball.h"
 #include "geom_helpers.h"
-
+#include "bonus.h"
 extern bool right_key_pressed;
 extern bool left_key_pressed;
 
@@ -20,6 +20,16 @@ void rocket::collide(ball& b, float elapsed_time) const {
         auto phi = M_PI_4 * (offset / (size_ / 2)) / 2;
         b.rotate_direction(phi);
     }
+}
+
+bool rocket::collide(bonus* bonus, float elapsed_time) {
+    auto bonus_vert = bonus->get_vertical_component();
+
+    if (bonus_vert.first.x < pos_.x || bonus_vert.first.x > pos_.x + size_) {
+        return false;
+    }
+
+    return bonus_vert.first.y <= pos_.y && bonus_vert.second.y >= pos_.y;
 }
 
 void rocket::process(float elapsed_time) {
@@ -37,4 +47,8 @@ rocket::~rocket() {}
 
 void rocket::render() {
     draw_rectangle(pos_, size_, height_, { 0.6, 0.4, 0.2 });
+}
+
+void rocket::apply_bonus(bonus* bonus) {
+    bonus->visit(*this);
 }

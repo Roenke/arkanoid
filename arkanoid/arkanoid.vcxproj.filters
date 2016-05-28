@@ -60,6 +60,9 @@
     <ClCompile Include="extend_bonus.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="random_bonus_factory.cpp">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -105,6 +108,9 @@
       <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
     <ClInclude Include="extend_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="random_bonus_factory.h">
       <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
   </ItemGroup>

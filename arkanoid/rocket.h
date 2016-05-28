@@ -3,6 +3,7 @@
 #include <gl/freeglut.h>
 #include "drawable.h"
 #include "config.h"
+class bonus;
 class squeeze_bonus;
 class extend_bonus;
 class ball;
@@ -16,10 +17,12 @@ public:
     {}
 
     void collide(ball& ball, float elapsed_time) const;
+    bool collide(bonus* bonus, float elapsed_time);
 
     void process(float elapsed_time);
     ~rocket() override;
     void render() override;
+    void apply_bonus(bonus* bonus);
 
     // bonuses
     friend extend_bonus;

@@ -38,6 +38,8 @@
 #define BONUS_HEIGHT        15
 #define BONUS_FALL_SPEED    30
 
+#define BONUSES_COUNT       7
+
 #define EXTEND_BONUS_COLOR {0, 1, 0}
 #define SQUEEZE_DESCRIPTION "Extend rocket"
 

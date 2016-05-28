@@ -32,6 +32,17 @@ void game::process(float elapsed_time) {
     player_.process(elapsed_time);
     field_.process(elapsed_time);
     player_.collide(ball_, elapsed_time);
-    field_.collide(ball_, elapsed_time);
+    field_.collide(ball_, elapsed_time, this);
     ball_.process(elapsed_time);
+}
+
+void game::apply_bonus(bonus* bonus) {
+    bonus->visit(*this);
+
+    player_.apply_bonus(bonus);
+    ball_.apply_bonus(bonus);
+}
+
+rocket& game::get_rocket() {
+    return player_;
 }

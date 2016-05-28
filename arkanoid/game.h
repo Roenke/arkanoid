@@ -12,6 +12,8 @@ public:
     ~game() override;
     void render() override;
     void process(float elapsed_time);
+    void apply_bonus(bonus* bonus);
+    rocket& get_rocket();
 
 private:
     rocket player_;

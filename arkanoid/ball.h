@@ -2,7 +2,7 @@
 #include <glm/glm.hpp>
 #include <gl/freeglut.h>
 #include "drawable.h"
-
+#include "bonus.h"
 class ball : public drawable {
 public:
     explicit ball(glm::vec2 const& pos);
@@ -20,6 +20,8 @@ public:
 
     glm::vec2 get_new_pos(float elapsed_time) const;
     GLint get_radius() const;
+
+    void apply_bonus(bonus* bonus);
 
     ~ball() override;
     void process(float elapsed_time);

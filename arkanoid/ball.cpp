@@ -67,6 +67,10 @@ GLint ball::get_radius() const {
     return radius_;
 }
 
+void ball::apply_bonus(bonus* bonus) {
+    bonus->visit(*this);
+}
+
 ball::~ball() {}
 
 void ball::process(float elapsed_time) {

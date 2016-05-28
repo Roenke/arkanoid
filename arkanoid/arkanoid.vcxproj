@@ -157,6 +157,7 @@
     <ClCompile Include="gl_helpers.cpp" />
     <ClCompile Include="legend.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="random_bonus_factory.cpp" />
     <ClCompile Include="rocket.cpp" />
     <ClCompile Include="squeeze_bonus.cpp" />
   </ItemGroup>
@@ -176,6 +177,7 @@
     <ClInclude Include="geom_helpers.h" />
     <ClInclude Include="gl_helpers.h" />
     <ClInclude Include="legend.h" />
+    <ClInclude Include="random_bonus_factory.h" />
     <ClInclude Include="rocket.h" />
     <ClInclude Include="squeeze_bonus.h" />
   </ItemGroup>
