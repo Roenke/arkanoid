@@ -1,8 +1,6 @@
 ﻿#include "ball.h"
 #include "gl_helpers.h"
 #include "config.h"
-#define _USE_MATH_DEFINES
-#include <math.h>
 
 ball::ball(glm::vec2 const& pos)
     : pos_(pos)
@@ -56,6 +54,10 @@ void ball::rotate_direction(float phi) {
         direction_.x = x;
         direction_.y = y;
     }
+}
+
+void ball::set_position(glm::vec2 pos) {
+    pos_ = pos;
 }
 
 glm::vec2 ball::get_new_pos(float elapsed_time) const {

@@ -69,6 +69,15 @@
     <ClCompile Include="speed_down_bonus.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="stick_bonus.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="unstick_bonus.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="crazy_ball_bonus.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -123,6 +132,15 @@
       <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
     <ClInclude Include="speed_up_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="stick_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="unstick_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="crazy_ball_bonus.h">
       <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
   </ItemGroup>

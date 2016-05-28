@@ -4,11 +4,8 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>
-#include <glm/detail/type_mat.hpp>
-#include <glm/detail/type_mat.hpp>
 
 static const int CIRCLE_PARTS = 50;
-
 
 static void (*display_callback_internal)();
 

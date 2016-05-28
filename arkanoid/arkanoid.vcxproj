@@ -149,6 +149,7 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="block.cpp" />
     <ClCompile Include="bonus.cpp" />
+    <ClCompile Include="crazy_ball_bonus.cpp" />
     <ClCompile Include="extend_bonus.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_border.cpp" />
@@ -162,6 +163,8 @@
     <ClCompile Include="speed_down_bonus.cpp" />
     <ClCompile Include="speed_up_bonus.cpp" />
     <ClCompile Include="squeeze_bonus.cpp" />
+    <ClCompile Include="stick_bonus.cpp" />
+    <ClCompile Include="unstick_bonus.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -171,6 +174,7 @@
     <ClInclude Include="block.h" />
     <ClInclude Include="bonus.h" />
     <ClInclude Include="config.h" />
+    <ClInclude Include="crazy_ball_bonus.h" />
     <ClInclude Include="drawable.h" />
     <ClInclude Include="extend_bonus.h" />
     <ClInclude Include="game.h" />
@@ -184,6 +188,8 @@
     <ClInclude Include="speed_down_bonus.h" />
     <ClInclude Include="speed_up_bonus.h" />
     <ClInclude Include="squeeze_bonus.h" />
+    <ClInclude Include="stick_bonus.h" />
+    <ClInclude Include="unstick_bonus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -42,13 +42,13 @@
 
 #define BONUSES_COUNT       7
 
-// TODO: move bonus description into bonus classes
-
 #define EXTEND_BONUS_COLOR              {0, 1, 0}
 #define EXTEND_BONUS_DESCRIPTION        "Extend rocket"
+#define EXTEND_BONUS_VALUE              30
 
 #define SQUEEZE_BONUS_COLOR             {1, 0, 0}
 #define SQUEEZE_BONUS_DESCRIPTION       "Collapse rocket"
+#define SQUEEZE_BONUS_VALUE              30
 
 #define SPEED_UP_BONUS_COLOR            {1, 1, 0}
 #define SPEED_UP_BONUS_DESCRIPTION      "Increase ball speed"
@@ -57,3 +57,12 @@
 #define SPEED_DOWN_BONUS_COLOR          {1, 1, 1}
 #define SPEED_DOWN_BONUS_DESCRIPTION    "Decrease ball speed"
 #define SPEED_DOWN_BONUS_DECREASE_VALUE 50
+
+#define STICK_BONUS_COLOR               {0, 0, 1}
+#define STICK_BONUS_DESCRIPTION    "Make rocket stickly"
+
+#define UNSTICK_BONUS_COLOR               {0, 1, 1}
+#define UNSTICK_DOWN_BONUS_DESCRIPTION    "Make rocket not stickly"
+
+#define CRAZY_BALL_BONUS_COLOR          {0.5, 0.5, 0.5}
+#define CRAZY_BALL_BONUS_DESCRIPTION    "Set random ball direction"

@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include <random>
-#include "config.h"
 #include "bonus.h"
 
 class random_bonus_factory {

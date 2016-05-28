@@ -3,6 +3,7 @@
 #include <gl/freeglut.h>
 #include "drawable.h"
 #include "bonus.h"
+class crazy_ball_bonus;
 class speed_up_bonus;
 class speed_down_bonus;
 
@@ -21,6 +22,8 @@ public:
     void positive_horizontal();
     void rotate_direction(float phi);
 
+    void set_position(glm::vec2 pos);
+
     glm::vec2 get_new_pos(float elapsed_time) const;
     GLint get_radius() const;
 
@@ -31,6 +34,7 @@ public:
 
     friend speed_down_bonus;
     friend speed_up_bonus;
+    friend crazy_ball_bonus;
 private:
     glm::vec2 pos_;
     glm::vec2 direction_;

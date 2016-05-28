@@ -28,10 +28,10 @@ void game_field::render() {
 
 game_field::~game_field() {}
 
-void game_field::collide(ball& b, float ellapsed_time, game* game_ptr) {
+void game_field::collide(ball& b, float elapsed_time, game* game_ptr) {
     auto it = blocks_.begin();
     while(it != blocks_.end()) {
-        if (it->collide(b, ellapsed_time)) {
+        if (it->collide(b, elapsed_time)) {
             bonus* bonus = bonus_factory_.get_random_bonus(it->get_pos());
             if(bonus) {
                 bonuses_.push_back(bonus);
@@ -46,7 +46,7 @@ void game_field::collide(ball& b, float ellapsed_time, game* game_ptr) {
     auto player = game_ptr->get_rocket();
     auto bonus_it = bonuses_.begin();
     while(bonus_it != bonuses_.end()) {
-        if(player.collide(*bonus_it, ellapsed_time)) {
+        if(player.collide(*bonus_it, elapsed_time)) {
             game_ptr->apply_bonus(*bonus_it);
             bonus_it = bonuses_.erase(bonus_it);
         }
@@ -56,8 +56,8 @@ void game_field::collide(ball& b, float ellapsed_time, game* game_ptr) {
     }
 }
 
-void game_field::process(float ellapsed_time) {
+void game_field::process(float elapsed_time) {
     for(auto bonus : bonuses_) {
-        bonus->process(ellapsed_time);
+        bonus->process(elapsed_time);
     }
 }

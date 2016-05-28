@@ -37,6 +37,9 @@ void on_key_down_callback(unsigned char ch, int a, int b) {
     case 'a': case 244:
         left_key_pressed = true;
         break;
+    case ' ':
+        game_ptr->release_ball();
+        break;
     }
 }
 

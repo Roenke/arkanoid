@@ -7,7 +7,6 @@ game::game(GLint width, GLint height)
     : player_()
     , field_()
     , border_()
-    , ball_({width / 2, height / 2})
     , score_(0)
     , lives_(3)
 {}
@@ -17,7 +16,6 @@ game::~game() {}
 void game::render() {
     border_.render();
     player_.render();
-    ball_.render();
     field_.render();
 
     std::stringstream ss;
@@ -31,18 +29,20 @@ void game::render() {
 void game::process(float elapsed_time) {
     player_.process(elapsed_time);
     field_.process(elapsed_time);
-    player_.collide(ball_, elapsed_time);
-    field_.collide(ball_, elapsed_time, this);
-    ball_.process(elapsed_time);
+    field_.collide(player_.get_ball(), elapsed_time, this);
+    player_.collide_with_ball(elapsed_time);
 }
 
 void game::apply_bonus(bonus* bonus) {
     bonus->visit(*this);
 
     player_.apply_bonus(bonus);
-    ball_.apply_bonus(bonus);
 }
 
 rocket& game::get_rocket() {
     return player_;
+}
+
+void game::release_ball() {
+    player_.release_ball();
 }

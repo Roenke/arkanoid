@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include <gl/freeglut.h>
 #include "drawable.h"
 
 class game_border : public drawable {

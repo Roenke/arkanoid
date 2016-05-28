@@ -3,7 +3,6 @@
 #include "drawable.h"
 #include "rocket.h"
 #include "game_field.h"
-#include "ball.h"
 #include "game_border.h"
 
 class game : public drawable {
@@ -14,12 +13,11 @@ public:
     void process(float elapsed_time);
     void apply_bonus(bonus* bonus);
     rocket& get_rocket();
-
+    void release_ball();
 private:
     rocket player_;
     game_field field_;
     game_border border_;
-    ball ball_;
 
     int score_;
     int lives_;

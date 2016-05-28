@@ -8,8 +8,8 @@ block::block(glm::vec2 const pos, GLint width, GLint height)
     , live_points_(0) {
 }
 
-bool block::collide(ball& b, float ellapsed_time) const {
-    auto ball_pos = b.get_new_pos(ellapsed_time);
+bool block::collide(ball& b, float elapsed_time) const {
+    auto ball_pos = b.get_new_pos(elapsed_time);
     auto r = b.get_radius();
 
     glm::vec2 up_left = pos_;

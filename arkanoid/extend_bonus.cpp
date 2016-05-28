@@ -4,10 +4,14 @@
 #include "rocket.h"
 #include <algorithm>
 
-void extend_bonus::render() {
-    draw_diamond(pos_, BONUS_WIDTH, BONUS_HEIGHT, EXTEND_BONUS_COLOR);
+void extend_bonus::visit(rocket& player) {
+    player.size_ = std::min(player.size_ + EXTEND_BONUS_VALUE, MAX_ROCKET_SIZE);
 }
 
-void extend_bonus::visit(rocket& player) {
-    player.size_ = std::min(player.size_ + 100, MAX_ROCKET_SIZE);
+glm::vec3 extend_bonus::get_color() {
+    return EXTEND_BONUS_COLOR;
+}
+
+const char* extend_bonus::get_description() const {
+    return EXTEND_BONUS_DESCRIPTION;
 }

@@ -9,7 +9,7 @@ class block : public drawable {
 public:
     block(glm::vec2 const pos, GLint width, GLint height);
 
-    bool collide(ball& b, float ellapsed_time) const;
+    bool collide(ball& b, float elapsed_time) const;
 
     glm::vec2 get_pos() const;
 
