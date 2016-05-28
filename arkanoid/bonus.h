@@ -2,6 +2,7 @@
 #include "drawable.h"
 #include <glm/glm.hpp>
 #include <utility>
+class legend;
 class rocket;
 class game_field;
 class game;
@@ -22,6 +23,8 @@ public:
     std::pair<glm::vec2, glm::vec2> get_vertical_component() const;
     void process(float elapsed_time);
     void render() override;
+
+    friend legend;
 protected:
     glm::vec2 pos_;
 };

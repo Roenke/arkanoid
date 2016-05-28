@@ -2,6 +2,7 @@
 #include "config.h"
 #include "gl_helpers.h"
 #include <sstream>
+#include "safe_line.h"
 
 game::game(GLint width, GLint height)
     : player_()
@@ -9,7 +10,7 @@ game::game(GLint width, GLint height)
     , border_()
     , score_(0)
     , lives_(3)
-{}
+    , save_line_count(0) {}
 
 game::~game() {}
 
@@ -24,6 +25,10 @@ void game::render() {
     ss.str("");
     ss << "lives: " << lives_;
     draw_string(ss.str().c_str(), { LIVES_STRING_H_OFFSET, LIVES_STRING_V_OFFSET }, { 1,1,1 }, LIVES_FONT);
+
+    for(int i = 0; i < save_line_count; ++i) {
+        safe_line::render(i);
+    }
 }
 
 void game::process(float elapsed_time) {

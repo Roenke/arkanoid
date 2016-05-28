@@ -4,6 +4,16 @@
 #define DEFAULT_GAME_WIDTH  724
 #define DEFAULT_GAME_HEIGHT 765
 
+#define SAFE_LINE_BEGIN_X   0
+#define SAFE_LINE_BEGIN_Y   (DEFAULT_GAME_HEIGHT - 20)
+#define SAFE_LINE_END_X     (DEFAULT_GAME_WIDTH)
+#define SAFE_LINE_END_Y     (SAFE_LINE_BEGIN_Y)
+#define SAFE_LINE_SEGMENTS  30
+#define SAFE_LINE_NOISE     8
+#define SAFE_LINE_COLOR     {0, 1, 1}
+#define SAFE_LINE_OFFSET    8
+#define MAX_SAFE_LINE_COUNT 4
+
 #define BLOCK_HEIGHT 20
 #define BLOCK_WIDTH  30
 
@@ -38,31 +48,34 @@
 
 #define BONUS_WIDTH         10
 #define BONUS_HEIGHT        15
-#define BONUS_FALL_SPEED    30
+#define BONUS_FALL_SPEED    80
 
 #define BONUSES_COUNT       7
 
-#define EXTEND_BONUS_COLOR              {0, 1, 0}
-#define EXTEND_BONUS_DESCRIPTION        "Extend rocket"
-#define EXTEND_BONUS_VALUE              30
+#define EXTEND_BONUS_COLOR                  {0, 1, 0}
+#define EXTEND_BONUS_DESCRIPTION            "Extend rocket"
+#define EXTEND_BONUS_VALUE                  30
 
-#define SQUEEZE_BONUS_COLOR             {1, 0, 0}
-#define SQUEEZE_BONUS_DESCRIPTION       "Collapse rocket"
-#define SQUEEZE_BONUS_VALUE              30
+#define SQUEEZE_BONUS_COLOR                 {1, 0, 0}
+#define SQUEEZE_BONUS_DESCRIPTION           "Collapse rocket"
+#define SQUEEZE_BONUS_VALUE                 30
 
-#define SPEED_UP_BONUS_COLOR            {1, 1, 0}
-#define SPEED_UP_BONUS_DESCRIPTION      "Increase ball speed"
-#define SPEED_UP_BONUS_INCREASE_VALUE   50
+#define SPEED_UP_BONUS_COLOR                {1, 1, 0}
+#define SPEED_UP_BONUS_DESCRIPTION          "Increase ball speed"
+#define SPEED_UP_BONUS_INCREASE_VALUE       50
 
-#define SPEED_DOWN_BONUS_COLOR          {1, 1, 1}
-#define SPEED_DOWN_BONUS_DESCRIPTION    "Decrease ball speed"
-#define SPEED_DOWN_BONUS_DECREASE_VALUE 50
+#define SPEED_DOWN_BONUS_COLOR              {1, 1, 1}
+#define SPEED_DOWN_BONUS_DESCRIPTION        "Decrease ball speed"
+#define SPEED_DOWN_BONUS_DECREASE_VALUE     50
 
-#define STICK_BONUS_COLOR               {0, 0, 1}
-#define STICK_BONUS_DESCRIPTION    "Make rocket stickly"
+#define STICK_BONUS_COLOR                   {0, 0, 1}
+#define STICK_BONUS_DESCRIPTION             "Make rocket stickly"
 
-#define UNSTICK_BONUS_COLOR               {0, 1, 1}
-#define UNSTICK_DOWN_BONUS_DESCRIPTION    "Make rocket not stickly"
+#define UNSTICK_BONUS_COLOR                 {0, 1, 1}
+#define UNSTICK_DOWN_BONUS_DESCRIPTION      "Make rocket not stickly"
 
-#define CRAZY_BALL_BONUS_COLOR          {0.5, 0.5, 0.5}
-#define CRAZY_BALL_BONUS_DESCRIPTION    "Set random ball direction"
+#define CRAZY_BALL_BONUS_COLOR              {0.5, 0.5, 0.5}
+#define CRAZY_BALL_BONUS_DESCRIPTION        "Set random ball direction"
+
+#define SAFE_LINE_BONUS_COLOR               {0.3, 0.5, 0.9}
+#define SAFE_LINE_BONUS_DESCRIPTION         "Add safe line"

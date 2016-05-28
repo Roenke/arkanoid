@@ -88,3 +88,17 @@ void draw_diamond(glm::vec2 const& center, GLint width, GLint height, glm::vec3 
     glEnd();
     glFinish();
 }
+
+void draw_line_with_noise(glm::vec2 const& begin, glm::vec2 const& end, GLint noise_level, GLint step_count, glm::vec3 const& color) {
+    glm::vec2 direction = (end - begin) * (1.f / step_count);
+    glBegin(GL_LINE_STRIP);
+    glVertex2f(begin.x, begin.y);
+    for(int i = 1; i < step_count - 1; ++i) {
+        auto point = begin + (direction * static_cast<float>(i));
+        point.y += rand() % noise_level - (noise_level / 2);
+        glVertex2f(point.x, point.y);
+    }
+    glVertex2f(end.x, end.y);
+    glEnd();
+    glFinish();
+}

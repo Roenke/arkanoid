@@ -5,6 +5,8 @@
 #include "game_field.h"
 #include "game_border.h"
 
+class safe_line_bonus;
+
 class game : public drawable {
 public:
     game(GLint width, GLint height);
@@ -14,6 +16,8 @@ public:
     void apply_bonus(bonus* bonus);
     rocket& get_rocket();
     void release_ball();
+
+    friend safe_line_bonus;
 private:
     rocket player_;
     game_field field_;
@@ -21,4 +25,6 @@ private:
 
     int score_;
     int lives_;
+
+    int save_line_count;
 };

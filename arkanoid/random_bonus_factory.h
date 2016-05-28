@@ -5,7 +5,7 @@
 class random_bonus_factory {
 public:
     random_bonus_factory();
-
+    static std::vector<bonus*> get_all_bonuses();
     bonus* get_random_bonus(glm::vec2 const& pos);
 private:
     std::default_random_engine generator_;

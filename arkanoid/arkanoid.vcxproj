@@ -160,6 +160,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="random_bonus_factory.cpp" />
     <ClCompile Include="rocket.cpp" />
+    <ClCompile Include="safe_line.cpp" />
+    <ClCompile Include="safe_line_bonus.cpp" />
     <ClCompile Include="speed_down_bonus.cpp" />
     <ClCompile Include="speed_up_bonus.cpp" />
     <ClCompile Include="squeeze_bonus.cpp" />
@@ -185,6 +187,8 @@
     <ClInclude Include="legend.h" />
     <ClInclude Include="random_bonus_factory.h" />
     <ClInclude Include="rocket.h" />
+    <ClInclude Include="safe_line.h" />
+    <ClInclude Include="safe_line_bonus.h" />
     <ClInclude Include="speed_down_bonus.h" />
     <ClInclude Include="speed_up_bonus.h" />
     <ClInclude Include="squeeze_bonus.h" />

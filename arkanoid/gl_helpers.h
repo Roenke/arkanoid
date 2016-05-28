@@ -17,3 +17,4 @@ void draw_rectangle(glm::vec2 const& up_left, GLint width, GLint height, glm::ve
 void draw_frame(glm::vec2 const& up_left, GLint width, GLint height, glm::vec3 const& color);
 void draw_circle(glm::vec2 const& center, GLint r, glm::vec3 const& color);
 void draw_diamond(glm::vec2 const& center, GLint width, GLint height, glm::vec3 const& color);
+void draw_line_with_noise(glm::vec2 const& begin, glm::vec2 const& end, GLint noise_level, GLint step_count, glm::vec3 const& color);

@@ -48,6 +48,7 @@ void game_field::collide(ball& b, float elapsed_time, game* game_ptr) {
     while(bonus_it != bonuses_.end()) {
         if(player.collide(*bonus_it, elapsed_time)) {
             game_ptr->apply_bonus(*bonus_it);
+            delete *bonus_it;
             bonus_it = bonuses_.erase(bonus_it);
         }
         else {
