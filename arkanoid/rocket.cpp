@@ -16,13 +16,13 @@ void rocket::collide(ball& b, float elapsed_time) const {
     auto dist = distance_to_point(pos, nearest);
     if (dist < r) {
         b.inverse_vertical();
-        auto offset = nearest.x - (pos_.x + size_ / 2);
-        auto phi = M_PI_4 * (offset / (size_ / 2)) / 2;
+        float offset = nearest.x - (pos_.x + size_ / 2);
+        float phi = static_cast<float>(M_PI_4) * (offset / (size_ / 2)) / 2;
         b.rotate_direction(phi);
     }
 }
 
-bool rocket::collide(bonus* bonus, float elapsed_time) {
+bool rocket::collide(bonus* bonus, float elapsed_time) const {
     auto bonus_vert = bonus->get_vertical_component();
 
     if (bonus_vert.first.x < pos_.x || bonus_vert.first.x > pos_.x + size_) {
@@ -34,12 +34,12 @@ bool rocket::collide(bonus* bonus, float elapsed_time) {
 
 void rocket::process(float elapsed_time) {
     if(!left_key_pressed && right_key_pressed) {
-        GLint new_pos = pos_.x + elapsed_time * ROCKET_SPEED;
-        pos_.x = std::min(DEFAULT_GAME_WIDTH - size_, new_pos);
+        auto new_pos = static_cast<GLint>(pos_.x + elapsed_time * ROCKET_SPEED);
+        pos_.x = static_cast<float>(std::min(DEFAULT_GAME_WIDTH - size_, new_pos));
     }
     if(left_key_pressed && !right_key_pressed) {
-        GLint new_pos = pos_.x - elapsed_time * ROCKET_SPEED;
-        pos_.x = std::max(0, new_pos);
+        auto new_pos = static_cast<GLint>(pos_.x - elapsed_time * ROCKET_SPEED);
+        pos_.x = static_cast<float>(std::max(0, new_pos));
     }
 }
 

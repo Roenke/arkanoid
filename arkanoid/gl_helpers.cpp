@@ -4,6 +4,8 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <glm/detail/type_mat.hpp>
+#include <glm/detail/type_mat.hpp>
 
 static const int CIRCLE_PARTS = 50;
 
@@ -46,11 +48,11 @@ void init_gl(int argc, char* argv[], gl_config const& config) {
 
 void draw_string(const char* text, glm::vec2 const& pos, glm::vec3 const& color, void* font) {
     glColor3f(color.r, color.g, color.b);
-    glRasterPos2i(pos.x, pos.y);
+    glRasterPos2f(pos.x, pos.y);
     glutBitmapString(font, reinterpret_cast<const unsigned char*>(text));
 }
 
-static void draw_rectangle_internal(int draw_type, glm::vec2 const& up_left, float width, float height, glm::vec3 const& color) {
+static void draw_rectangle_internal(int draw_type, glm::vec2 const& up_left, GLint width, GLint height, glm::vec3 const& color) {
     glColor3f(color.r, color.g, color.b);
     glBegin(draw_type);
         glVertex2f(up_left.x, up_left.y);
@@ -61,16 +63,16 @@ static void draw_rectangle_internal(int draw_type, glm::vec2 const& up_left, flo
     glFinish();
 }
 
-void draw_rectangle(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color) {
+void draw_rectangle(glm::vec2 const& up_left, GLint width, GLint height, glm::vec3 const& color) {
     draw_rectangle_internal(GL_POLYGON, up_left, width, height, color);
 }
 
-void draw_frame(glm::vec2 const& up_left, float width, float height, glm::vec3 const& color) {
+void draw_frame(glm::vec2 const& up_left, GLint width, GLint height, glm::vec3 const& color) {
     draw_rectangle_internal(GL_LINE_LOOP, up_left, width, height, color);
 }
 
-void draw_circle(glm::vec2 const& center, float r, glm::vec3 const& color) {
-    float phi = 2 * M_PI / CIRCLE_PARTS;
+void draw_circle(glm::vec2 const& center, GLint r, glm::vec3 const& color) {
+    float phi = 2 * static_cast<float>(M_PI) / CIRCLE_PARTS;
     glColor3f(color.r, color.g, color.b);
     glBegin(GL_POLYGON);
         for (int i = 0; i < CIRCLE_PARTS; i++)
@@ -79,7 +81,7 @@ void draw_circle(glm::vec2 const& center, float r, glm::vec3 const& color) {
     glFinish();
 }
 
-void draw_diamond(glm::vec2 const& center, float width, float height, glm::vec3 const& color) {
+void draw_diamond(glm::vec2 const& center, GLint width, GLint height, glm::vec3 const& color) {
     glColor3f(color.r, color.g, color.b);
     glBegin(GL_POLYGON);
         glVertex2f(center.x + width / 2, center.y);

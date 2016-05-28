@@ -17,7 +17,7 @@ public:
     {}
 
     void collide(ball& ball, float elapsed_time) const;
-    bool collide(bonus* bonus, float elapsed_time);
+    bool collide(bonus* bonus, float elapsed_time) const;
 
     void process(float elapsed_time);
     ~rocket() override;

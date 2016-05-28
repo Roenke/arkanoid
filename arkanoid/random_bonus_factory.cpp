@@ -6,7 +6,7 @@
 #include "speed_down_bonus.h"
 
 random_bonus_factory::random_bonus_factory()
-    : generator_(std::chrono::system_clock::now().time_since_epoch().count())
+    : generator_(static_cast<uint32_t>(std::chrono::system_clock::now().time_since_epoch().count()))
     , distribution_(0, BONUSES_COUNT)
 {}
 

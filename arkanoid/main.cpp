@@ -68,7 +68,7 @@ void fps_counter(time_point now) {
 void display() {
     static time_point old_time = std::chrono::high_resolution_clock::now();
     auto now = std::chrono::high_resolution_clock::now();
-    auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(now - old_time).count() / 1000.;
+    auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(now - old_time).count() / 1000.f;
     game_ptr->process(elapsed_time);
     fps_counter(now);
     game_ptr->render();
