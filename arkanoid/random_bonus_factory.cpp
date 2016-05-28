@@ -30,7 +30,7 @@ std::vector<bonus*> random_bonus_factory::get_all_bonuses() {
 }
 
 bonus* random_bonus_factory::get_random_bonus(glm::vec2 const& pos) {
-    if(!(rand() < RAND_MAX / 10)) {
+    if(!(rand() < RAND_MAX * BONUS_PROPABILITY)) {
         return nullptr;
     }
 

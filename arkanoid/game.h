@@ -4,6 +4,7 @@
 #include "rocket.h"
 #include "game_field.h"
 #include "game_border.h"
+#include "legend.h"
 
 class safe_line_bonus;
 
@@ -22,6 +23,7 @@ private:
     rocket player_;
     game_field field_;
     game_border border_;
+    legend legend_;
 
     int score_;
     int lives_;

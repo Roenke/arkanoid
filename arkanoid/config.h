@@ -12,7 +12,7 @@
 #define SAFE_LINE_NOISE     8
 #define SAFE_LINE_COLOR     {0, 1, 1}
 #define SAFE_LINE_OFFSET    8
-#define MAX_SAFE_LINE_COUNT 4
+#define MAX_SAFE_LINE_COUNT 3
 
 #define BLOCK_HEIGHT 20
 #define BLOCK_WIDTH  30
@@ -51,6 +51,7 @@
 #define BONUS_FALL_SPEED    80
 
 #define BONUSES_COUNT       7
+#define BONUS_PROPABILITY   1.
 
 #define EXTEND_BONUS_COLOR                  {0, 1, 0}
 #define EXTEND_BONUS_DESCRIPTION            "Extend rocket"
@@ -79,3 +80,9 @@
 
 #define SAFE_LINE_BONUS_COLOR               {0.3, 0.5, 0.9}
 #define SAFE_LINE_BONUS_DESCRIPTION         "Add safe line"
+
+#define LEGEND_X_OFFSET     (DEFAULT_GAME_WIDTH + 10)
+#define LEGEND_Y_OFFSET     100
+#define LEGEND_NOTE_OFFSET  20
+#define LEGEND_COLOR        {0.8, 1, 1}
+#define LEGEND_FONT         GLUT_BITMAP_HELVETICA_12

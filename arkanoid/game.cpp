@@ -18,6 +18,7 @@ void game::render() {
     border_.render();
     player_.render();
     field_.render();
+    legend_.render();
 
     std::stringstream ss;
     ss << "score: " << score_;
