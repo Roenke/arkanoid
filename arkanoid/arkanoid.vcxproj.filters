@@ -16,6 +16,15 @@
     <Filter Include="Заголовочные файлы\bonus">
       <UniqueIdentifier>{cea74037-be01-424f-8370-692b607f44d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\objects">
+      <UniqueIdentifier>{3af49eef-4a1b-416f-8c5c-a48fcf8a9cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\bonus">
+      <UniqueIdentifier>{7ca32482-3427-4e4b-ab17-f86a7d580cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\objects">
+      <UniqueIdentifier>{1e907090-09f9-4564-ab16-29cd77bd84c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,58 +33,133 @@
     <ClCompile Include="gl_helpers.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
+    <ClCompile Include="geom_helpers.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="ball.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="random_bonus_factory.cpp">
+      <Filter>Заголовочные файлы\bonus</Filter>
     </ClCompile>
-    <ClCompile Include="rocket.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="block.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="crazy_ball_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
     </ClCompile>
     <ClCompile Include="bonus.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="extend_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="safe_line_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="speed_down_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="speed_up_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="stick_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="squeeze_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="unstick_bonus.cpp">
+      <Filter>Файлы исходного кода\bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="legend.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="rocket.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="safe_line.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
     </ClCompile>
     <ClCompile Include="game_field.cpp">
-      <Filter>Заголовочные файлы</Filter>
+      <Filter>Файлы исходного кода\objects</Filter>
     </ClCompile>
     <ClCompile Include="game_border.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="block.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ball.cpp">
+      <Filter>Файлы исходного кода\objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="gl_helpers.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="drawable.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="rocket.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="ball.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="block.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="game_field.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="bonus.h">
       <Filter>Заголовочные файлы\bonus</Filter>
     </ClInclude>
-    <ClInclude Include="game_border.h">
+    <ClInclude Include="config.h">
       <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="geom_helpers.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ball.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="block.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game_border.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="drawable.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="game_field.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="legend.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="rocket.h">
+      <Filter>Заголовочные файлы\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="squeeze_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="extend_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="random_bonus_factory.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="speed_down_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="speed_up_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="stick_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="unstick_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="crazy_ball_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_line_bonus.h">
+      <Filter>Заголовочные файлы\bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_line.h">
+      <Filter>Заголовочные файлы\objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

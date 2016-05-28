@@ -149,12 +149,24 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="block.cpp" />
     <ClCompile Include="bonus.cpp" />
+    <ClCompile Include="crazy_ball_bonus.cpp" />
+    <ClCompile Include="extend_bonus.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_border.cpp" />
     <ClCompile Include="game_field.cpp" />
+    <ClCompile Include="geom_helpers.cpp" />
     <ClCompile Include="gl_helpers.cpp" />
+    <ClCompile Include="legend.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="random_bonus_factory.cpp" />
     <ClCompile Include="rocket.cpp" />
+    <ClCompile Include="safe_line.cpp" />
+    <ClCompile Include="safe_line_bonus.cpp" />
+    <ClCompile Include="speed_down_bonus.cpp" />
+    <ClCompile Include="speed_up_bonus.cpp" />
+    <ClCompile Include="squeeze_bonus.cpp" />
+    <ClCompile Include="stick_bonus.cpp" />
+    <ClCompile Include="unstick_bonus.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -163,12 +175,25 @@
     <ClInclude Include="ball.h" />
     <ClInclude Include="block.h" />
     <ClInclude Include="bonus.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="crazy_ball_bonus.h" />
     <ClInclude Include="drawable.h" />
+    <ClInclude Include="extend_bonus.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="game_border.h" />
     <ClInclude Include="game_field.h" />
+    <ClInclude Include="geom_helpers.h" />
     <ClInclude Include="gl_helpers.h" />
+    <ClInclude Include="legend.h" />
+    <ClInclude Include="random_bonus_factory.h" />
     <ClInclude Include="rocket.h" />
+    <ClInclude Include="safe_line.h" />
+    <ClInclude Include="safe_line_bonus.h" />
+    <ClInclude Include="speed_down_bonus.h" />
+    <ClInclude Include="speed_up_bonus.h" />
+    <ClInclude Include="squeeze_bonus.h" />
+    <ClInclude Include="stick_bonus.h" />
+    <ClInclude Include="unstick_bonus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
