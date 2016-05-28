@@ -20,6 +20,10 @@ public:
 
     friend safe_line_bonus;
 private:
+    void render_score_and_lifes() const;
+
+    bool is_game_over;
+
     rocket player_;
     game_field field_;
     game_border border_;

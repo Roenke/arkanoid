@@ -23,6 +23,8 @@ public:
     void rotate_direction(float phi);
 
     void set_position(glm::vec2 pos);
+    bool is_fall() const;
+    bool is_game_over() const;
 
     glm::vec2 get_new_pos(float elapsed_time) const;
     GLint get_radius() const;

@@ -19,7 +19,7 @@ void rocket::collide_with_ball(float elapsed_time) {
     auto pos = ball_.get_new_pos(elapsed_time);
     auto nearest = get_nearest_point(pos, { pos_,{ pos_.x + size_, pos_.y } });
     auto dist = distance_to_point(pos, nearest);
-    if (dist < r) {
+    if (dist < r && ball_.is_fall()) {
         ball_.inverse_vertical();
         float offset = nearest.x - (pos_.x + size_ / 2);
         float phi = static_cast<float>(M_PI_4) * (offset / (size_ / 2)) / 2;

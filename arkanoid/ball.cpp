@@ -60,6 +60,14 @@ void ball::set_position(glm::vec2 pos) {
     pos_ = pos;
 }
 
+bool ball::is_fall() const {
+    return direction_.y >= 0;
+}
+
+bool ball::is_game_over() const {
+    return pos_.y - radius_ > DEFAULT_GAME_HEIGHT;
+}
+
 glm::vec2 ball::get_new_pos(float elapsed_time) const {
     return{ pos_.x + direction_.x * elapsed_time * speed_,
             pos_.y + direction_.y * elapsed_time * speed_ };
@@ -82,7 +90,7 @@ void ball::process(float elapsed_time) {
     if (new_x - radius_ < 0 || new_x + radius_ > DEFAULT_GAME_WIDTH) {
         inverse_horizontal(); collision = true;
     }
-    if (new_y - radius_ < 0 || new_y + radius_ > DEFAULT_GAME_HEIGHT) {
+    if (new_y - radius_ < 0) {
         inverse_vertical(); collision = true;
     }
 
