@@ -23,8 +23,10 @@
 
 #define BALL_RADIUS             10
 #define BALL_COLOR              { 0.3, 0.7, 0.4 }
-#define START_BALL_SPEED        400
+#define START_BALL_SPEED        500
 #define START_BALL_DIRECTION    { -1., -1. }
+#define MIN_BALL_SPEED          200
+#define MAX_BALL_SPEED          900
 
 #define SCORE_STRING_H_OFFFSET  624
 #define SCORE_STRING_V_OFFSET   20
@@ -40,8 +42,18 @@
 
 #define BONUSES_COUNT       7
 
-#define EXTEND_BONUS_COLOR {0, 1, 0}
-#define SQUEEZE_DESCRIPTION "Extend rocket"
+// TODO: move bonus description into bonus classes
 
-#define SQUEEZE_BONUS_COLOR {1, 0, 0}
-#define SQUEEZE_DESCRIPTION "Collapse rocket"
+#define EXTEND_BONUS_COLOR              {0, 1, 0}
+#define EXTEND_BONUS_DESCRIPTION        "Extend rocket"
+
+#define SQUEEZE_BONUS_COLOR             {1, 0, 0}
+#define SQUEEZE_BONUS_DESCRIPTION       "Collapse rocket"
+
+#define SPEED_UP_BONUS_COLOR            {1, 1, 0}
+#define SPEED_UP_BONUS_DESCRIPTION      "Increase ball speed"
+#define SPEED_UP_BONUS_INCREASE_VALUE   50
+
+#define SPEED_DOWN_BONUS_COLOR          {1, 1, 1}
+#define SPEED_DOWN_BONUS_DESCRIPTION    "Decrease ball speed"
+#define SPEED_DOWN_BONUS_DECREASE_VALUE 50

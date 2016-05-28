@@ -3,6 +3,9 @@
 #include <gl/freeglut.h>
 #include "drawable.h"
 #include "bonus.h"
+class speed_up_bonus;
+class speed_down_bonus;
+
 class ball : public drawable {
 public:
     explicit ball(glm::vec2 const& pos);
@@ -25,6 +28,9 @@ public:
 
     ~ball() override;
     void process(float elapsed_time);
+
+    friend speed_down_bonus;
+    friend speed_up_bonus;
 private:
     glm::vec2 pos_;
     glm::vec2 direction_;

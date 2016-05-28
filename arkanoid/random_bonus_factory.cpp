@@ -2,6 +2,8 @@
 #include <chrono>
 #include "extend_bonus.h"
 #include "squeeze_bonus.h"
+#include "speed_up_bonus.h"
+#include "speed_down_bonus.h"
 
 random_bonus_factory::random_bonus_factory()
     : generator_(std::chrono::system_clock::now().time_since_epoch().count())
@@ -18,6 +20,10 @@ bonus* random_bonus_factory::get_random_bonus(glm::vec2 const& pos) {
         return new extend_bonus(pos);
     case 1:
         return new squeeze_bonus(pos);
+    case 2:
+        return new speed_up_bonus(pos);
+    case 3:
+        return  new speed_down_bonus(pos);
     default:
         return nullptr;
     }
